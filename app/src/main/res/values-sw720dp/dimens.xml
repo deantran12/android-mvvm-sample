@@ -1,0 +1,236 @@
+<resources>
+  <dimen name="dp1">
+    2.0dp
+  </dimen>
+  <dimen name="dp3">
+    6.0dp
+  </dimen>
+  <dimen name="dp4">
+    8.0dp
+  </dimen>
+  <dimen name="dp5">
+    10.0dp
+  </dimen>
+  <dimen name="dp7">
+    14.0dp
+  </dimen>
+  <dimen name="dp10">
+    20.0dp
+  </dimen>
+  <dimen name="dp13">
+    26.0dp
+  </dimen>
+  <dimen name="dp15">
+    30.0dp
+  </dimen>
+  <dimen name="dp20">
+    40.0dp
+  </dimen>
+  <dimen name="dp25">
+    50.0dp
+  </dimen>
+  <dimen name="dp30">
+    60.0dp
+  </dimen>
+  <dimen name="dp35">
+    70.0dp
+  </dimen>
+  <dimen name="dp40">
+    80.0dp
+  </dimen>
+  <dimen name="dp45">
+    90.0dp
+  </dimen>
+  <dimen name="dp50">
+    100.0dp
+  </dimen>
+  <dimen name="dp55">
+    110.0dp
+  </dimen>
+  <dimen name="dp60">
+    120.0dp
+  </dimen>
+  <dimen name="dp80">
+    160.0dp
+  </dimen>
+  <dimen name="dp100">
+    200.0dp
+  </dimen>
+  <dimen name="dp120">
+    240.0dp
+  </dimen>
+  <dimen name="dp150">
+    300.0dp
+  </dimen>
+  <dimen name="dp160">
+    320.0dp
+  </dimen>
+  <dimen name="dp170">
+    340.0dp
+  </dimen>
+  <dimen name="dp250">
+    500.0dp
+  </dimen>
+  <dimen name="dp280">
+    560.0dp
+  </dimen>
+  <dimen name="dp320">
+    640.0dp
+  </dimen>
+  <dimen name="dp400">
+    800.0dp
+  </dimen>
+  <dimen name="sp5">
+    10.0sp
+  </dimen>
+  <dimen name="sp9">
+    18.0sp
+  </dimen>
+  <dimen name="sp10">
+    20.0sp
+  </dimen>
+  <dimen name="sp11">
+    22.0sp
+  </dimen>
+  <dimen name="sp12">
+    24.0sp
+  </dimen>
+  <dimen name="sp13">
+    26.0sp
+  </dimen>
+  <dimen name="sp14">
+    28.0sp
+  </dimen>
+  <dimen name="sp15">
+    30.0sp
+  </dimen>
+  <dimen name="sp16">
+    32.0sp
+  </dimen>
+  <dimen name="sp17">
+    34.0sp
+  </dimen>
+  <dimen name="sp20">
+    40.0sp
+  </dimen>
+  <dimen name="sp24">
+    48.0sp
+  </dimen>
+  <dimen name="sp25">
+    50.0sp
+  </dimen>
+  <dimen name="sp30">
+    60.0sp
+  </dimen>
+  <dimen name="sp35">
+    70.0sp
+  </dimen>
+  <dimen name="sp40">
+    80.0sp
+  </dimen>
+  <dimen name="sp50">
+    100.0sp
+  </dimen>
+  <dimen name="sp18">
+    36.0sp
+  </dimen>
+  <dimen name="sp44">
+    88.0sp
+  </dimen>
+  <dimen name="dp32">
+    64.0dp
+  </dimen>
+  <dimen name="dp24">
+    48.0dp
+  </dimen>
+  <dimen name="dp18">
+    36.0dp
+  </dimen>
+  <dimen name="dp14">
+    28.0dp
+  </dimen>
+  <dimen name="dp12">
+    24.0dp
+  </dimen>
+  <dimen name="dp16">
+    32.0dp
+  </dimen>
+  <dimen name="dp9">
+    18.0dp
+  </dimen>
+  <dimen name="dp8">
+    16.0dp
+  </dimen>
+  <dimen name="dp22">
+    44.0dp
+  </dimen>
+  <dimen name="sp26">
+    52.0sp
+  </dimen>
+  <dimen name="common_top_margin">
+    44.0dp
+  </dimen>
+  <dimen name="dp6">
+    12.0dp
+  </dimen>
+  <dimen name="dp200">
+    400.0dp
+  </dimen>
+  <dimen name="roboto_calendar_circle_size">
+    8.0dp
+  </dimen>
+  <dimen name="roboto_calendar_day_of_the_month_background_size">
+    60.0dp
+  </dimen>
+  <dimen name="roboto_calendar_day_of_the_month_font">
+    24.0sp
+  </dimen>
+  <dimen name="roboto_calendar_day_of_week_font">
+    24.0sp
+  </dimen>
+  <dimen name="roboto_calendar_month_font">
+    30.0sp
+  </dimen>
+  <dimen name="roboto_calendar_month_margin_bottom">
+    30.0dp
+  </dimen>
+  <dimen name="roboto_calendar_padding">
+    16.0dp
+  </dimen>
+  <dimen name="roboto_calendar_ring_size">
+    24.0dp
+  </dimen>
+  <dimen name="roboto_calendar_week_margin_bottom">
+    20.0dp
+  </dimen>
+  <dimen name="dp66">
+    132.0dp
+  </dimen>
+  <dimen name="dp90">
+    180.0dp
+  </dimen>
+  <dimen name="dp52">
+    104.0dp
+  </dimen>
+  <dimen name="dp110">
+    220.0dp
+  </dimen>
+  <dimen name="dp2">
+    4.0dp
+  </dimen>
+  <dimen name="dp180">
+    360.0dp
+  </dimen>
+  <dimen name="dp130">
+    260.0dp
+  </dimen>
+  <dimen name="dp92">
+    184.0dp
+  </dimen>
+  <dimen name="dp0">
+    1.0dp
+  </dimen>
+  <dimen name="dp11">
+    22.0dp
+  </dimen>
+</resources>

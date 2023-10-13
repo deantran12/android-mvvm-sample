@@ -47,6 +47,7 @@ android {
     dataBinding {
         enabled = true
     }
+    namespace 'com.sonth.mvvm.sample'
 }
 
 def retrofitVersion = '2.9.0'

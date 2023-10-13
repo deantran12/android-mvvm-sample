@@ -5,24 +5,27 @@ import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
-import android.view.*
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.Toast
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
-import dagger.android.support.AndroidSupportInjection
 import com.sonth.mvvm.sample.R
 import com.sonth.mvvm.sample.utils.KeyboardUtil
+import dagger.android.support.AndroidSupportInjection
 import org.greenrobot.eventbus.EventBus
-import org.greenrobot.eventbus.Subscribe
 
-abstract class BaseFragment<T : ViewDataBinding, V : BaseViewModel> : Fragment(),
-    ViewTreeObserver.OnGlobalLayoutListener {
+abstract class BaseFragment<T : ViewDataBinding, V : BaseViewModel> : Fragment() {
 
     var rootView: View? = null
-    var binding: T? = null
+    private var _binding: T? = null
+    // This property is only valid between onCreateView and
+    // onDestroyView.
+    val binding get() = _binding!!
 
     protected abstract fun getViewModel(): V
 
@@ -37,15 +40,6 @@ abstract class BaseFragment<T : ViewDataBinding, V : BaseViewModel> : Fragment()
      * @param savedInstanceState
      */
     protected abstract fun updateUI(savedInstanceState: Bundle?)
-
-    /**
-     * Override for set view model
-     *
-     * @return view model instance
-     */
-    override fun onGlobalLayout() {
-        rootView!!.viewTreeObserver.removeOnGlobalLayoutListener(this)
-    }
 
     open fun getThemResId(): Int = R.style.CustomDialog
     lateinit var loading: AlertDialog
@@ -62,35 +56,23 @@ abstract class BaseFragment<T : ViewDataBinding, V : BaseViewModel> : Fragment()
         savedInstanceState: Bundle?
     ): View? {
         val layoutId = getLayoutId()
-        if (rootView != null && rootView!!.parent != null) {
-            val parent = rootView!!.parent as ViewGroup
-            parent.removeView(rootView)
-        } else {
-            try {
-                binding = DataBindingUtil.inflate(inflater, layoutId, container, false)
-                rootView = if (binding != null) {
-                    binding!!.root
-                } else {
-                    inflater.inflate(layoutId, container, false)
-                }
-                rootView!!.viewTreeObserver.addOnGlobalLayoutListener(this)
-
-                binding!!.setVariable(getBindingVariable(), getViewModel())
-                binding!!.lifecycleOwner = viewLifecycleOwner
-                binding!!.executePendingBindings()
-
-                updateUI(savedInstanceState)
-
-                initDialog()
-            } catch (e: InflateException) {
-                e.printStackTrace()
-            }
-        }
+        _binding = DataBindingUtil.inflate(inflater, layoutId, container, false)
+        rootView = binding.root
+        binding.setVariable(getBindingVariable(), getViewModel())
+        binding.lifecycleOwner = viewLifecycleOwner
+        binding.executePendingBindings()
+        updateUI(savedInstanceState)
+        initDialog()
         return rootView
     }
 
     private fun performDI() {
         AndroidSupportInjection.inject(this)
+    }
+
+    override fun onDestroyView() {
+        _binding = null
+        super.onDestroyView()
     }
 
     @Throws
